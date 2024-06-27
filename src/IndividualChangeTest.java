@@ -19,5 +19,6 @@ class IndividualChangeTest {
         assertEquals(0,individualChange.getCountByBankNoteType(BankNote.FIVE_DOLLAR_BILL));
         assertEquals(1,individualChange.getCountByBankNoteType(BankNote.TWO_DOLLAR_BILL));
         assertEquals(0,individualChange.getCountByBankNoteType(BankNote.ONE_DOLLAR_BILL));
+        assertEquals(amount,individualChange.getAmount());
     }
 }

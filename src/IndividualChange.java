@@ -32,9 +32,10 @@ public class IndividualChange {
 
     //a count method that counts how many banknotes for the amount
     public void count() {
+        int tempAmount = amount;
         for (int i = 0; i < bankNoteCountArr.size(); i++) {
-            bankNoteCountArr.get(i).add(amount / bankNoteCountArr.get(i).getBankNoteType().getValue());
-            amount = amount % bankNoteCountArr.get(i).getBankNoteType().getValue();
+            bankNoteCountArr.get(i).add(tempAmount / bankNoteCountArr.get(i).getBankNoteType().getValue());
+            tempAmount = tempAmount % bankNoteCountArr.get(i).getBankNoteType().getValue();
         }
     }
 
@@ -48,6 +49,9 @@ public class IndividualChange {
                 return bankNoteCountArr.get(i).getBankNoteCount();
         }
         throw new Exception("No BankNote of such type");
+    }
+    public int getAmount() {
+        return amount;
     }
     public void addIndividualChange(IndividualChange otherIndividualChange){
         for (int i = 0; i < bankNoteCountArr.size(); i++) {
