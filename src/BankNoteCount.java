@@ -21,7 +21,9 @@ public class BankNoteCount {
     public void add(int addition){
         this.count += addition;
     }
-
+    public boolean bankNoteCountHas(BankNote bankNote){
+        return this.bankNote == bankNote;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -38,4 +40,5 @@ public class BankNoteCount {
     public String toString(){
         return "BankNoteCount: " + this.count + " " + this.bankNote;
     }
+
 }

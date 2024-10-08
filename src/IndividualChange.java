@@ -42,6 +42,18 @@ public class IndividualChange {
     public ArrayList<BankNoteCount> getBankNoteCountArr() {
         return bankNoteCountArr;
     }
+    public BankNote getBankNoteType(BankNoteCount bankNoteCount){
+            return bankNoteCount.getBankNoteType();
+    }
+//    public int getBankNoteIndex(BankNote bankNote){
+//        BankNoteCount correctBankNoteCount;
+//        for(BankNoteCount bankNoteCount: bankNoteCountArr){
+//            if (bankNoteCount.bankNoteCountHas(bankNote)){
+//                return bankNoteCountArr.indexOf(bankNoteCount);
+//            }
+//        }
+//        return -1;
+//    }
 
     public int getCountByBankNoteType(BankNote bankNote)throws Exception {
         for (int i = 0; 0 < bankNoteCountArr.size() + 1; i++) {
