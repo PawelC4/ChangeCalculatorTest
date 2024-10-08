@@ -1,5 +1,4 @@
 import java.util.*;
-import java.io.*;
 public class ChangeCalculatorApp {
     public static void main(String[] args) throws Exception {
         FileReader fileReader = new FileReader();
@@ -9,7 +8,6 @@ public class ChangeCalculatorApp {
         IndividualChangeList individualChangeList = new IndividualChangeList(fileDataRounded);
         individualChangeList.countAll();
         IndividualChange result = individualChangeList.addAll();
-        //System.out.println(result);
         consolePrinter.Process(result);
     }
 
