@@ -1,3 +1,8 @@
+package calc;
+
+import calc.BankNote;
+import calc.IndividualChange;
+import calc.IndividualChangeList;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -43,7 +48,7 @@ class IndividualChangeListTest {
             IndividualChange actualTotal = individualChangeListActual.addAll();
             IndividualChange expectedTotal = new IndividualChange(1977,BankNote.HUNDRED_DOLLAR_BILL,19,
                     BankNote.FIFTY_DOLLAR_BILL,1,BankNote.TWENTY_DOLLAR_BILL,0,BankNote.TEN_DOLLAR_BILL,1,
-                    BankNote.FIVE_DOLLAR_BILL,2,BankNote.TWO_DOLLAR_BILL,3,BankNote.ONE_DOLLAR_BILL,1);
+                    BankNote.FIVE_DOLLAR_BILL,2, BankNote.TWO_DOLLAR_BILL,3,BankNote.ONE_DOLLAR_BILL,1);
             //then
             assertEquals(expectedTotal,actualTotal);
         }

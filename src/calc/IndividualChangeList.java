@@ -1,5 +1,13 @@
+package calc;
+
 import java.util.*;
-import java.io.*;
+
+/**
+ * In the IndividualChangeList you create a list of IndividualChange objects. Calculating the individual change of each
+ * amount inputted and saving it on a arrayList. In this Class you can use the countAll method that counts the individual
+ * change of all the objects in the list. This Class also returns an Individual Change that contains the sum of all bankNotes
+ * calculated as change as well as the sum of the inputted amounts.
+ */
 public class IndividualChangeList {
     private ArrayList<IndividualChange> individualChangeList = new ArrayList<IndividualChange>();
 

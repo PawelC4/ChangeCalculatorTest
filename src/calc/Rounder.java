@@ -1,5 +1,11 @@
+package calc;
+
 import java.util.*;
 
+/**
+ * This class Rounds the inputted amounts to the nearest whole number and returns an ArrayList of rounded amounts.
+ * This Class follows the .5 and up or .4 and down rounding principle.
+ */
 public class Rounder {
    public static ArrayList<Integer> rounder(ArrayList<Double> notRoundedArr){
        ArrayList<Integer> roundedArr = new ArrayList<Integer>();

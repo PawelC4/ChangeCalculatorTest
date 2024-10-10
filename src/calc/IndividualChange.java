@@ -1,5 +1,11 @@
+package calc;
 import java.util.*;
 
+/**
+ * The Individual Change class creates an ArrayList of BankNoteCount objects. In this method you create a list of all
+ * banknote types. By using the count method you iterate through the inputted individual amount and Start counting what
+ * and how many banknotes are needed to make up the individual amount.
+ */
 public class IndividualChange {
     private int amount;
     private ArrayList<BankNoteCount> bankNoteCountArr = new ArrayList<BankNoteCount>();
@@ -17,7 +23,8 @@ public class IndividualChange {
             c++;
         }
     }
-    public IndividualChange(int amount,BankNote firstBill,int count1,BankNote secondBill, int count2,BankNote thirdBill, int count3,
+    // Created a manually inputted Constructor for Test Case use.
+    public IndividualChange(int amount, BankNote firstBill, int count1, BankNote secondBill, int count2, BankNote thirdBill, int count3,
                             BankNote fourthBill, int count4, BankNote fifthBill, int count5, BankNote sixthBill, int count6, BankNote seventhBill, int count7){
         this.amount = amount;
         bankNoteCountArr.add(new BankNoteCount(firstBill,count1));
@@ -45,9 +52,9 @@ public class IndividualChange {
     public BankNote getBankNoteType(BankNoteCount bankNoteCount){
             return bankNoteCount.getBankNoteType();
     }
-//    public int getBankNoteIndex(BankNote bankNote){
-//        BankNoteCount correctBankNoteCount;
-//        for(BankNoteCount bankNoteCount: bankNoteCountArr){
+//    public int getBankNoteIndex(calc.BankNote bankNote){
+//        calc.BankNoteCount correctBankNoteCount;
+//        for(calc.BankNoteCount bankNoteCount: bankNoteCountArr){
 //            if (bankNoteCount.bankNoteCountHas(bankNote)){
 //                return bankNoteCountArr.indexOf(bankNoteCount);
 //            }
@@ -60,14 +67,22 @@ public class IndividualChange {
             if (bankNoteCountArr.get(i).getBankNoteType().equals(bankNote))
                 return bankNoteCountArr.get(i).getBankNoteCount();
         }
-        throw new Exception("No BankNote of such type");
+        throw new Exception("No calc.BankNote of such type");
     }
     public int getAmount() {
         return amount;
     }
+    public void setAmount(int amount){
+        this.amount = amount;
+    }
     public void addIndividualChange(IndividualChange otherIndividualChange){
         for (int i = 0; i < bankNoteCountArr.size(); i++) {
             this.bankNoteCountArr.get(i).add(otherIndividualChange.bankNoteCountArr.get(i).getBankNoteCount());
+        }
+    }
+    public void subtractIndividualChange(IndividualChange otherIndividualChange) {
+        for (int i = 0; i < bankNoteCountArr.size(); i++) {
+            this.bankNoteCountArr.get(i).subtract(otherIndividualChange.bankNoteCountArr.get(i).getBankNoteCount());
         }
     }
     public void addIndividualChangeAmount(IndividualChange otherIndividualChange){
@@ -88,7 +103,7 @@ public class IndividualChange {
         return Objects.hash(amount, bankNoteCountArr);
     }
     public String toString(){
-        return "IndividualChange: " + this.amount + " " + this.bankNoteCountArr.toString();
+        return "calc.IndividualChange: " + this.amount + " " + this.bankNoteCountArr.toString();
     }
 }
 

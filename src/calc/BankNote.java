@@ -1,3 +1,9 @@
+package calc;
+
+/**This enum BankNote is where the Types of BankNotes are declared as well as the value of the BankNotes is declared.
+ * These are the BankNotes that are going to be used when calculating Change for each Individual Amount.
+ *
+ */
 public enum BankNote {
     HUNDRED_DOLLAR_BILL(100),
     FIFTY_DOLLAR_BILL(50),

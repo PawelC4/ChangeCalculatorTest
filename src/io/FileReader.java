@@ -1,3 +1,8 @@
+package io;
+/**
+ * This Class reads in the amounts from a file and returns an Arraylist of type Double.
+ */
+
 import java.util.*;
 import java.io.*;
 public class FileReader {

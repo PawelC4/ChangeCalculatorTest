@@ -1,3 +1,7 @@
+package calc;
+
+import calc.BankNote;
+import calc.IndividualChange;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

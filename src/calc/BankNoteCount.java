@@ -1,3 +1,11 @@
+package calc;
+
+/** BankNoteCount is a class that creates an Object of BankNoteCount.
+ * The Object BankNoteCount represents the BankNoteType from the enum BankNote as well as the count of BankNotes.
+ * This will be used to initialize the count for each type of BankNote when Calculating the Change.
+ * This contains get and set methods
+ **/
+
 import java.util.Objects;
 
 public class BankNoteCount {
@@ -7,7 +15,7 @@ public class BankNoteCount {
         this.bankNote=bankNote;
         count = 0;
     }
-    public BankNoteCount(BankNote bankNote,int count){
+    public BankNoteCount(BankNote bankNote, int count){
         this.bankNote=bankNote;
         this.count = count;
     }
@@ -20,6 +28,9 @@ public class BankNoteCount {
 
     public void add(int addition){
         this.count += addition;
+    }
+    public void subtract(int subtraction) {
+        this.count -= subtraction;
     }
     public boolean bankNoteCountHas(BankNote bankNote){
         return this.bankNote == bankNote;
@@ -38,7 +49,8 @@ public class BankNoteCount {
     }
     @Override
     public String toString(){
-        return "BankNoteCount: " + this.count + " " + this.bankNote;
+        return "calc.BankNoteCount: " + this.count + " " + this.bankNote;
     }
+
 
 }
